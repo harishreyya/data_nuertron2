@@ -1,6 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');  
+
 const app = express();
+app.use(cors());
 app.use(express.json());
 mongoose.connect('mongodb+srv://hari:hari@cluster0.hsmpfuf.mongodb.net/dataNeutron?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
